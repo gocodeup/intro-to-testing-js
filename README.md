@@ -61,16 +61,16 @@ This is an introduction to automated testing in JavaScript. The idea behind test
     - Refresh `report.html` in your browser.
     - Fix the syntax error and confirm that tests are all green.
 
-1. Now, go to `code.js` and replace the function statement with a function experession. Do all the tests stay green or not? They *should* stay green. Double check your syntax.
+1. Now, go to `code.js` and replace the function statement with a function experession. Do all the tests stay green or not? They *should* stay green. Double check your syntax. These are interchangeable because functions are *first class* citizens in the JS language.
 ```js
 // function statement
 function helloWorld() {
     return "Hello, World!";
 }
 ```
-replace with
+
 ```js
-// function expression (assigning a function to a variable)
+// function expression (assigning an anonymous function to a variable)
 const helloWorld = function() {
     return "Hello, World!";
 }
