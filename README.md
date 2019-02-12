@@ -203,14 +203,14 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
     - Ensure that isFive returns true when passed 5
     - What about if we pass in the string `"5"`? Do you want isFive to return true for that? 
     - If so, write the test, ensure that the test is failing, and then write the implementation
-- Add your work to GitHub before proceeding
+- Add your work to GitHub before moving forward.
 
 ## TDD process for testing and creating an `isEven` function
 - Start with the smallest tests first.
 - Write just enough code to green the test
 - Build up functionality one small piece at a time.
 - Refactor when you can
-- Repeat until the tests are robust and the function works as intended
+- Repeat until the tests are robust and the function works as intended.
 - Commit your work to git.
 
 ## Test Drive an `isVowel` function
@@ -219,7 +219,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Build up functionality one small piece at a time.
 - Commit your work to git at each step.
 - Refactor when appropriate
-- Repeat until the tests are robust and the function works as intended
+- Repeat until the tests are robust and the function works as intended.
 - Commit your work to git.
 
 ## Test Drive an `add` function
@@ -227,9 +227,8 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Write just enough code to green the test
 - Build up functionality one small piece at a time.
 - Refactor
-- Repeat
+- Repeat until the teswts are robust and the function works as intented.
 - Commit your work to git and push to GitHub.
-
 
 ## More resources
 - [Intro to TDD](https://www.youtube.com/watch?v=QCif_-r8eK4)
