@@ -206,9 +206,19 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Add your work to GitHub before moving forward.
 
 ## TDD process for testing and creating an `isEven` function
-- Start with the smallest tests first.
+- Start with the smallest tests first. Assert that the function is defined.
 - Write just enough code to green the test
 - Build up functionality one small piece at a time.
+    - Assert that isEven:
+        - returns a boolean no matter the input
+        - returns true when executed with `isEven(2)`
+        - returns true when executed with `isEven(-4)`
+        - returns false when executed with `isEven(3)`
+        - returns false when called with `isEven("banana")`
+        - returns true when called with `isEven("8")`
+        - returns false when called with `isEven(infinity)`
+        - return false when called with a boolean input like `isEven(true)` or `isEven(false)`
+        - returns false when calles without an argument like `isEven()`
 - Refactor when you can
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git.
@@ -218,11 +228,30 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Write just enough code to green the test
 - Build up functionality one small piece at a time.
 - Commit your work to git at each step.
+- Create the following assertions:
+    - `isVowel` always returns a boolean
+    - `isVowel("a")` returns true
+    - `isVowel("A")` returns true
+    - `isVowel("y")` returns false
+    - `isVowel(4)` returns false
+    - `isVowel(true)` or `isVowel(false)` both return false
+    - `isVowel("banana")` returns false
+    - `isVowel()` returns false
 - Refactor when appropriate
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git.
 
 ## Test Drive an `add` function
+- The `add` function should sum two numbers, as long as each input is a number or a string containing a number.
+- Create the following assertions:
+    - `add(2, 3)` returns 5
+    - `add(-3, -9)` returns -12
+    - `add("5", 6)` returns 11
+    - `add("-4", "10")` returns 6
+    - `add("banana", "split")` returns NaN
+    - `add(2, "apples")` returns NaN
+    - `add()` returns NaN
+- If any input is not a number, 
 - Start with the smallest tests first.
 - Write just enough code to green the test
 - Build up functionality one small piece at a time.
