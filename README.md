@@ -220,6 +220,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Write just enough code to green the test
 - Build up functionality one small piece at a time. 
 - Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat.
+    - Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD.
     - Assert that isEven:
         - returns a boolean no matter the input
         - returns true when executed with `isEven(2)`
@@ -230,7 +231,6 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
         - returns false when called with `isEven(infinity)`
         - return false when called with a boolean input like `isEven(true)` or `isEven(false)`
         - returns false when calles without an argument like `isEven()`
-    - Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD. 
 - Refactor when and where you can. Be careful not to refactor before you have a handful of green tests.
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git and push to GitHub before moving forward.
@@ -241,21 +241,24 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Build up functionality one small piece at a time.
 - Commit your work to git at each step.
 - Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat.
-    - `isVowel` always returns a boolean
-    - `isVowel("a")` returns true
-    - `isVowel("A")` returns true
-    - `isVowel("y")` returns false
-    - `isVowel(4)` returns false
-    - `isVowel(true)` or `isVowel(false)` both return false
-    - `isVowel("banana")` returns false
-    - `isVowel()` returns false
+    - Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD.
+    - Assert that:
+        - `isVowel` always returns a boolean
+        - `isVowel("a")` returns true
+        - `isVowel("A")` returns true
+        - `isVowel("y")` returns false
+        - `isVowel(4)` returns false
+        - `isVowel(true)` or `isVowel(false)` both return false
+        - `isVowel("banana")` returns false
+        - `isVowel()` returns false
 - Refactor when appropriate and possible.
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git and push to GitHub before moving forward.
 
 ## Test Drive an `add` function
 - The `add` function should sum two numbers, as long as each input is a number or a string containing a number.
-- Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat.
+- Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat (move onto the next test.)
+- Assert that `add`:
     - `add(2, 3)` returns 5
     - `add(-3, -9)` returns -12
     - `add("5", 6)` returns 11
