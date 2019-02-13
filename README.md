@@ -184,7 +184,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Now, add `expect(sayHello(false)).toBe("Hello, World!")` to the `<table></table>ests.js` file. Refresh to see the failing test.
 - Add just enough code to `code.js` to green this test.
 - Once all the tests are green, identify refactor opportunities and refactor your solution.
-- Are there any other ]edge cases](https://en.wikipedia.org/wiki/Edge_case) you want to write a test for? You have a green light to add more of your own tests to "drive" the implementation.
+- Are there any other [edge cases](https://en.wikipedia.org/wiki/Edge_case) you want to write a test for? You have a green light to add more of your own tests to "drive" the implementation.
 - Some edge cases to consider. What if:
     - the input is `null`?
     - the input is an empty string like `""`?
@@ -230,7 +230,8 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
         - returns false when called with `isEven(infinity)`
         - return false when called with a boolean input like `isEven(true)` or `isEven(false)`
         - returns false when calles without an argument like `isEven()`
-- Refactor when you can
+    - Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD. 
+- Refactor when and where you can. Be careful not to refactor before you have a handful of green tests.
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git and push to GitHub before moving forward.
 
@@ -248,7 +249,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
     - `isVowel(true)` or `isVowel(false)` both return false
     - `isVowel("banana")` returns false
     - `isVowel()` returns false
-- Refactor when appropriate
+- Refactor when appropriate and possible.
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git and push to GitHub before moving forward.
 
@@ -262,11 +263,11 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
     - `add("banana", "split")` returns NaN
     - `add(2, "apples")` returns NaN
     - `add()` returns NaN
-- If any input is not a number, 
 - Start with the smallest tests first.
 - Write just enough code to green the test
 - Build up functionality one small piece at a time.
-- Refactor
+- If any input is not a number, return NaN
+- Refactor, if possible
 - Repeat until the tests are robust and the function works as intented.
 - Commit your work to git and push to GitHub.
 
