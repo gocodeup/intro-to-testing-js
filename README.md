@@ -26,7 +26,7 @@ This is an introduction to automated testing in JavaScript. The idea behind auto
 3. Step 3: Write only enough code to green that newest test. No more, no less. It's OK if things are hard-coded here.
 4. Step 4: Run all tests. We're looking for green tests across the board.
 5. Step 5: Refactor the code. [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) means to increase the code quality without changing its observable behavior. This is an opportunity to increase readability, increase flexibility, reduce duplication, or make the code more accessible for yourself and other developers moving forward. 
-6. Step 6. Repeat the process by going back to Step 1 and following the steps to add new tests.
+6. Step 6: Repeat the process by going back to Step 1. The repeat step means  following the steps to add new tests.
 7. Overview: This entire TDD workflow is often explained as the repetition of "Red, Green, Refactor". This encapsulates the idea of writing a single, small failing test, writing only enough code to green the test, and then to refactor, when possible.
 
 ## Three Laws of Test Driven Development
@@ -134,7 +134,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Step 3: If the test wants us to return `"Hello, Jane!"` then literally write `return "Hello, Jane!";` because that's the simplest way to green a test looking for `"Hello, Jane!"`.
 - Step 4: Run all tests. They should all be green at this point.
 - Step 5: It's too soon to refactor.
-- Step 6: Repeat (meaning to add another test, so let's move to the next exercise)
+- Step 6: Repeat step means to add another test, so let's move to the next exercise.
 
 ### Exercise #4 Add another small, simple test
 - Step 1:  In `tests.js`, assert that `sayHello("Alex")` returns `"Hello, Alex!"`. Our first test should be *super* simple and *super* small. This means that our next test should look like `expect(sayHello("Alex")).toBe("Hello, Alex!")`. 
@@ -142,7 +142,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Step 3: It's challenging not to jump to the "correct" answer already, but let's stay close to the TDD method. Write *just* enough code to green the test. This means making sure that the `sayHello` function definition inside of `code.js` takes an an input argument. If `input === "Alex"`, then we `return "Hello, Alex!"` else `return "Hello, Jane!"`. Don't get too fancy. A cornerstone of TDD is refactoring only once you have a handful of green tests, not just one or two with new inputs.
 - Step 4: Run all tests, expecting that all are now green. Does each test turn green? If so, then we can proceed. We can't refactor unless we have greened a test, even with a hard-coded implementation.
 - Step 5: If you feel the urge to refactor already, hang on! Let's add one more test!
-- Step 6: Repeat (add another test!)   
+- Step 6: Repeat the TDD cycle, so let's add another test in the next exercise.
 
 ### Exercise #6 One more test before refactoring...
 - Step 1: Add another (tiny) assertion! In `tests.js`, assert that `sayHello("Pat")` returns `"Hello, Pat!"`. Since our tests should be super simple, the assertion should be `expect(sayHello("Pat")).toBe("Hello, Pat!")`
@@ -181,10 +181,15 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Follow that by adding just enough code inside of the `sayHello` function `code.js` to green that latest test. Recommend checking if the input variable's value is `undefined`.
 - Next, add `expect(sayHello(true)).toBe("Hello, World!")` to the `tests.js` file. Refresh to see the failing red test.
 - Add just enough code to `code.js` to green that latest test. `if (input === true)` then `return "Hello, World!"`
-- Now, add `expect(sayHello(false)).toBe("Hello, World!")` to the `tests.js` file. Refresh to see the failing test.
+- Now, add `expect(sayHello(false)).toBe("Hello, World!")` to the `<table></table>ests.js` file. Refresh to see the failing test.
 - Add just enough code to `code.js` to green this test.
 - Once all the tests are green, identify refactor opportunities and refactor your solution.
 - Are there any other ]edge cases](https://en.wikipedia.org/wiki/Edge_case) you want to write a test for? You have a green light to add more of your own tests to "drive" the implementation.
+- Some edge cases to consider. What if:
+    - the input is `null`?
+    - the input is an empty string like `""`?
+    - the input is a number like `2.3`?
+    - the input is a number inside a string like `"5"`?
 
 ### Add, commit, and push your work to GitHub.
 - "If your code ain't checked-in to source control, then it doesn't exist."
@@ -261,11 +266,16 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Write just enough code to green the test
 - Build up functionality one small piece at a time.
 - Refactor
-- Repeat until the teswts are robust and the function works as intented.
+- Repeat until the tests are robust and the function works as intented.
 - Commit your work to git and push to GitHub.
 
+
+## Jasmine Documentation
+- [Jasmine Global Functions](https://jasmine.github.io/api/3.3/global.html)
+- [Jasmine Matchers](https://jasmine.github.io/api/3.3/matchers.html)
+
 ## More resources
-- [Three Laws of TDD](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd)
 - [Intro to TDD](https://www.youtube.com/watch?v=QCif_-r8eK4)
 - [Sandi Metz on testing and what to test](https://www.youtube.com/watch?v=URSWYvyc42M)
 - [Bob Martin on TDD and Code Quality](https://www.youtube.com/watch?v=is41fgDrqn0)
+- [Three Laws of TDD](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd)
