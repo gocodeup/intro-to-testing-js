@@ -1,33 +1,33 @@
 # Intro to Testing in JS
 
 ## Summary
-This is an introduction to automated testing in JavaScript. The idea behind testing is to provide feedback on the code you write to solve a problem, add a feature, or fix a bug. The feedback from the tests comes in the form of green passing tests or red failing tests. Simply, tests are functions that test functions to compare the results of the actual output vs. the expected, specified output.
+This is an introduction to automated testing in JavaScript. The idea behind automated testing is to provide immediate feedback on the code you write to solve a problem, add a feature, or fix a bug. The feedback from the tests comes in the form of green passing tests or red failing tests. Tests are functions that test functions to compare the results of the actual output vs. the expected output.
 
 ## Overview
-- Green tests are passing, red tests mean that the code is incomplete, inaccurate, missing, or you have a syntax error somewhere in `code.js`.
-- Syntax errors in either the `tests.js` or the `code.js` file will keep things from running accurately.
+- Green tests are passing, red tests mean that the code is incomplete, inaccurate, missing, or you have a syntax error somewhere in your code.
+- Syntax errors in either the `tests.js` or the `code.js` file will keep things from running accurately. If you go from a page of many green tests to all red, there's likely a typo or syntax errors somewhere.
 - The approach of writing tests before writing the code that passes is called Test-Driven Development, or TDD.
 - Writing small tests, like the ones provided, is called `unit testing`.
-- "Unit testing" means to test a piece of functionality as small as a single function.
-- This introduction will introduce unit tests, writing code to pass unit tests, and your very first unit tests.
+- "Unit testing" means to test a piece of functionality as small as a single function. Testing entire applications from end-to-end is another topic.
+- This introduction will introduce unit tests, the TDD practice of writing tests first, and writing the code to pass unit tests.
 
 ## Prerequisites for this exercise
 - Understanding of valid JavaScript syntax
 - Primitive data types and basic operators in JavaScript
 - Control statements (if, if/else, if/elseif/else)
 - Authoring user defined functions
-- This material can be introduced after data types, conditionals, and functions and is appropriate to introduce before loops, arrays, objects, etc...
+- This material can be delivered after data types, conditionals, and functions. This exercise is appropriate to introduce before loops, arrays, objects, etc...
 
-## Reference: The Test Driven Development means tests "drive" the development.
+## Reference: The Test Driven Development means that tests "drive" the development.
 [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development), TDD, is the process of authoring a test before writing any other code. Here's the TDD workflow:
 
 1. Step 1: Write the smallest possible test: Identify the simplest, smallest thing you want to confirm. For example, before a function exists, assert that the function is defined.
-2. Step 2: Run all the tests to ensure that the new test fails. We're **supposed** to see a red, failing test, since there's no code yet to green it. Red means we did the first step correctly.
-3. Step 3: Write only enough code to green that newest test. No more, no less.
+2. Step 2: Run all the tests to ensure that the new test fails. We're **supposed** to see a red, failing test, since there's no code yet to green it. Red means we did the first step correctly. Seeing the newest test turn red is critical because our tests drive the development, not the other way around.
+3. Step 3: Write only enough code to green that newest test. No more, no less. It's OK if things are hard-coded here.
 4. Step 4: Run all tests. We're looking for green tests across the board.
 5. Step 5: Refactor the code. [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) means to increase the code quality without changing its observable behavior. This is an opportunity to increase readability, increase flexibility, reduce duplication, or make the code more accessible for yourself and other developers moving forward. 
 6. Step 6. Repeat the process by going back to Step 1 and following the steps to add new tests.
-7. Overview: This entire TDD workflow is often explained as a repetition of "Red, Green, Refactor". This encapsulates the idea of writing a single, small failing test, writing only enough code to green the test, and then to refactor, when possible.
+7. Overview: This entire TDD workflow is often explained as the repetition of "Red, Green, Refactor". This encapsulates the idea of writing a single, small failing test, writing only enough code to green the test, and then to refactor, when possible.
 
 ## Three Laws of Test Driven Development
 - You are not allowed to write any production code unless it is to make a failing unit test pass.
@@ -94,13 +94,13 @@ const helloWorld = function() {
 
 **Before moving on, ensure that all tests are green.**
 
-## Exercise #1 Let's Test Drive a `sayHello` function
+## Let's Test Drive a `sayHello` function
 - We'll build up our solution incrementally, in a Test-Driven manner.
 - Be careful not to refactor too early. Only refactor once we have sufficient tests.
 - Ultimately, `sayHello` should say "Hello" to any string we pass to it.
 - We'll handle some edge cases once we've solved the heart of the matter.
 
-### Take your first "Test Drive"
+### Exercise #1 Take your first "Test Drive" by writing your first test!
 Our next exercise is to follow the TDD workflow to develop incremental tests and solutions for testing a `sayHello()` function that takes in a name as an argument and returns a string that says hello to that name.
 - Step 1: Let's write the smallest test possible. Open up `tests.js`. Add a `describe`, an `it`, and an `expect` to assert that `sayHello` is a defined function. Use your tests for `helloWorld` as a guide.
 - Step 2: Run all the tests. At this point, we're expecting and *hoping* for a single, red failing test that we just now authored.
@@ -128,30 +128,30 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Step 6: Repeat (Repeat the process by moving to build the next, small test)
 - Always: Add, commit, and push your work to GitHub.
 
-### Exercise #3 - Add a realistic test
-- Step 1: It's time to add a realistic assertion. In `tests.js`, assert that `sayHello("Jane")` returns `"Hello, Jane!"`. Our first test should be *super* simple and *super* small.
+### Exercise #3 - Add a test to convirm actual vs. expected output.
+- Step 1: How that the function exists and returns the right data type, let's add our first realistic assertion. In `tests.js`, assert that `sayHello("Jane")` returns `"Hello, Jane!"`. Our first test should be *super* simple and *super* small.
 - Step 2: Run all tests and make sure that this newly added test is red.
 - Step 3: If the test wants us to return `"Hello, Jane!"` then literally write `return "Hello, Jane!";` because that's the simplest way to green a test looking for `"Hello, Jane!"`.
 - Step 4: Run all tests. They should all be green at this point.
 - Step 5: It's too soon to refactor.
-- Step 6: Repeat (meaning to add another test, so move to the next exercise)
+- Step 6: Repeat (meaning to add another test, so let's move to the next exercise)
 
 ### Exercise #4 Add another small, simple test
-- Step 1:  In `tests.js`, assert that `sayHello("Alex")` returns `"Hello, Alex!"`. Our first test should be *super* simple and *super* small. This means that our our test should look like `expect(sayHello("Alex")).toBe("Hello, Alex!")`. 
+- Step 1:  In `tests.js`, assert that `sayHello("Alex")` returns `"Hello, Alex!"`. Our first test should be *super* simple and *super* small. This means that our next test should look like `expect(sayHello("Alex")).toBe("Hello, Alex!")`. 
 - Step 2: Run all tests and make sure that this newly added test is red.
-- Step 3: It's challenging not to jump to the "correct" answer already, but let's stay close to the method. Write *just* enough code to green the test. This means making sure that the `sayHello`  function definition inside of `code.js` takes an an input argument. If `input === "Alex"`, then we `return "Hello, Alex!"` else `return "Hello, Jane!"`. Don't get too fancy, yet. A cornerstone of TDD is refactoring only once you have a handful of green tests, not just one or two with new inputs.
+- Step 3: It's challenging not to jump to the "correct" answer already, but let's stay close to the TDD method. Write *just* enough code to green the test. This means making sure that the `sayHello` function definition inside of `code.js` takes an an input argument. If `input === "Alex"`, then we `return "Hello, Alex!"` else `return "Hello, Jane!"`. Don't get too fancy. A cornerstone of TDD is refactoring only once you have a handful of green tests, not just one or two with new inputs.
 - Step 4: Run all tests, expecting that all are now green. Does each test turn green? If so, then we can proceed. We can't refactor unless we have greened a test, even with a hard-coded implementation.
 - Step 5: If you feel the urge to refactor already, hang on! Let's add one more test!
 - Step 6: Repeat (add another test!)   
 
-### Exercise 6 One more test before refactoring...
+### Exercise #6 One more test before refactoring...
 - Step 1: Add another (tiny) assertion! In `tests.js`, assert that `sayHello("Pat")` returns `"Hello, Pat!"`. Since our tests should be super simple, the assertion should be `expect(sayHello("Pat")).toBe("Hello, Pat!")`
 - Step 2: Run all tests and make sure that this newly added test is red and failing. 
 - Step 3: Again, you may feel the urge to jump to the "correct" answer already. Let's stay on target. Write *just* enough code to green the test. For this case, *just enough* code means adding another conditional such that if `input === "Pat"`, then the function should have `return "Hello, Pat!"`.
 - Step 4: Run all tests. Does each test turn green? If so, then we can proceed. 
 - Step 5: Refactor! It's definitely refactoring time!
 
-### Refactoring
+### Refactoring step
 - How do we know that it's time to refactor? The answer: Once we have a handful of green tests, but the logic feels hard-coded, funky, or incomplete, then it's probably refactoring time.
 - Notice that when the input is "Jane", "Pat", or "Alex", the tests green. But what if we sent in any other name as the argument? 
 - When every new test means that we're adding another `if` or `else if` to the code, is there a better way of doing things?
@@ -176,7 +176,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Type `git status`, again, to make sure that all files are added and committed.
 - Finally, push your work with `git push`. 
 
-### Repeat step (where we look for additional tests to add)
+### "Repeat" step (where we look for additional tests to add)
 - First, in `tests.js`, add `expect(sayHello()).toBe("Hello, World!")`. Then refresh `report.html` to see the failing test.
 - Follow that by adding just enough code inside of the `sayHello` function `code.js` to green that latest test. Recommend checking if the input variable's value is `undefined`.
 - Next, add `expect(sayHello(true)).toBe("Hello, World!")` to the `tests.js` file. Refresh to see the failing red test.
@@ -207,7 +207,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
     - Ensure that isFive returns true when passed 5
     - What about if we pass in the string `"5"`? Do you want isFive to return true for that? 
     - If so, write the test, ensure that the test is failing, and then write the implementation
-- Add your work to GitHub before moving forward.
+- Commit your work to git and push to GitHub before moving forward.
 
 ## TDD process for testing and creating an `isEven` function
 - Start with the smallest tests first. Assert that the function is defined.
@@ -226,7 +226,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
         - returns false when calles without an argument like `isEven()`
 - Refactor when you can
 - Repeat until the tests are robust and the function works as intended.
-- Commit your work to git.
+- Commit your work to git and push to GitHub before moving forward.
 
 ## Test Drive an `isVowel` function
 - Start with the smallest tests first.
@@ -244,7 +244,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
     - `isVowel()` returns false
 - Refactor when appropriate
 - Repeat until the tests are robust and the function works as intended.
-- Commit your work to git.
+- Commit your work to git and push to GitHub before moving forward.
 
 ## Test Drive an `add` function
 - The `add` function should sum two numbers, as long as each input is a number or a string containing a number.
