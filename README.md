@@ -81,7 +81,9 @@ const helloWorld = function() {
 ## The Test Driven Development workflow: Tests "drive" the development.
 [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development), TDD, is the process of authoring a test before writing any other code. Here's the TDD workflow:
 1. The shortest description for the TDD workflow is RED->GREEN->REFACTOR
-    - Write a super, small test that will alread, run the test runner, write just enough code to 
+    - Red with a brand new teeny-tiny test of asserting x -> y.
+    - Green with *just* enough code to green the test, even if it's "hard-coded", just green the test.
+    - Refactor
 
 1. Step 1: Write the smallest possible test: Identify the simplest, smallest thing you want to confirm. For example, before a function exists, assert that the function is defined.
 2. Step 2: Run all the tests to ensure that the new test fails. We're **supposed** to see a red, failing test, since there's no code yet to green it. Red means we did the first step correctly.
