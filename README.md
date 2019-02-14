@@ -128,7 +128,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Step 6: Repeat (Repeat the process by moving to build the next, small test)
 - Always: Add, commit, and push your work to GitHub.
 
-### Exercise #3 - Add a test to convirm actual vs. expected output.
+### Exercise #3 - Add a test to confirm actual vs. expected output.
 - Step 1: How that the function exists and returns the right data type, let's add our first realistic assertion. In `tests.js`, assert that `sayHello("Jane")` returns `"Hello, Jane!"`. Our first test should be *super* simple and *super* small.
 - Step 2: Run all tests and make sure that this newly added test is red.
 - Step 3: If the test wants us to return `"Hello, Jane!"` then literally write `return "Hello, Jane!";` because that's the simplest way to green a test looking for `"Hello, Jane!"`.
@@ -144,14 +144,14 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Step 5: If you feel the urge to refactor already, hang on! Let's add one more test!
 - Step 6: Repeat the TDD cycle, so let's add another test in the next exercise.
 
-### Exercise #6 One more test before refactoring...
+### Exercise #5 One more test before refactoring...
 - Step 1: Add another (tiny) assertion! In `tests.js`, assert that `sayHello("Pat")` returns `"Hello, Pat!"`. Since our tests should be super simple, the assertion should be `expect(sayHello("Pat")).toBe("Hello, Pat!")`
 - Step 2: Run all tests and make sure that this newly added test is red and failing. 
 - Step 3: Again, you may feel the urge to jump to the "correct" answer already. Let's stay on target. Write *just* enough code to green the test. For this case, *just enough* code means adding another conditional such that if `input === "Pat"`, then the function should have `return "Hello, Pat!"`.
 - Step 4: Run all tests. Does each test turn green? If so, then we can proceed. 
 - Step 5: Refactor! It's definitely refactoring time!
 
-### Refactoring step
+### When to Refactor
 - How do we know that it's time to refactor? The answer: Once we have a handful of green tests, but the logic feels hard-coded, funky, or incomplete, then it's probably refactoring time.
 - Notice that when the input is "Jane", "Pat", or "Alex", the tests green. But what if we sent in any other name as the argument? 
 - When every new test means that we're adding another `if` or `else if` to the code, is there a better way of doing things?
@@ -160,13 +160,13 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Since our goal is to have a sayHello function that says hello to any input string, then adding a new conditional for each input is not scalable. 
 - In the TDD approach, refactoring is only possible if you have enough tests and enough code that all the tests are green. In this way, your tests provide a target for the refactor. If your refactoring fails tests that    
 
-### Implementing the refactoring
+### Exercise #6 Implement the refactor!
 - Inside `sayHello` in `code.js`, what's a change you can identify that will improve the overall functioning of this function?
 - Can you get the implmentation of `sayHello` down to a function with only one line of code inside?
 - If we have `return "Hello, " + input + "!";`, does this work for all names?
 - Does this bring up any other issues with other inputs?
 
-### Add, commit, and push your work to GitHub.
+### Exercise #7 Add, commit, and push your work to GitHub.
 - "If your code ain't checked-in to source control, then it doesn't exist."
 - In your terminal, ensure that the `pwd` command shows that you're in the directory for this project.
 - First, `git status`. Notice which files are tracked by git and which files have changes.
@@ -176,7 +176,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Type `git status`, again, to make sure that all files are added and committed.
 - Finally, push your work with `git push`. 
 
-### "Repeat" step (where we look for additional tests to add)
+### Exercise #8 "Repeat" step (where we look for additional tests to add)
 - First, in `tests.js`, add `expect(sayHello()).toBe("Hello, World!")`. Then refresh `report.html` to see the failing test.
 - Follow that by adding just enough code inside of the `sayHello` function `code.js` to green that latest test. Recommend checking if the input variable's value is `undefined`.
 - Next, add `expect(sayHello(true)).toBe("Hello, World!")` to the `tests.js` file. Refresh to see the failing red test.
@@ -192,7 +192,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
     - the input is a number inside a string like `"5"`?
     - the input is another data type like an array, object, or function?
 
-### Add, commit, and push your work to GitHub.
+### Exercise #9 Add, commit, and push your work to GitHub (make this a habit)
 - "If your code ain't checked-in to source control, then it doesn't exist."
 - In your terminal, ensure that the `pwd` command shows that you're in the directory for this project.
 - First, `git status`. Notice which files are tracked by git and which files have changes.
@@ -202,7 +202,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Type `git status`, again, to make sure that all files are added and committed.
 - Finally, push your work with `git push`. 
 
-## Let's Test-Drive an `isFive` function!
+## Exercise #10 Let's Test-Drive an `isFive` function!
 - Inside of `tests.js`, write a `describe` block for our new `isFive` function.
 - As your first, failing test, write an `it` and an `expect` asserting that a function named `isFive` exists.
 - Run the tests by refreshing `report.html` to show the red, failing test.
@@ -215,7 +215,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
     - If so, write the test, ensure that the test is failing, and then write the implementation
 - Commit your work to git and push to GitHub before moving forward.
 
-## TDD process for testing and creating an `isEven` function
+## Exercise #11 TDD process for testing and creating an `isEven` function
 - Start with the smallest tests first. Assert that the function is defined.
 - Write just enough code to green the test
 - Build up functionality one small piece at a time. 
@@ -235,7 +235,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git and push to GitHub before moving forward.
 
-## Test Drive an `isVowel` function
+## Exercise #12 Test Drive an `isVowel` function
 - Start with the smallest tests first.
 - Write just enough code to green the test
 - Build up functionality one small piece at a time.
@@ -255,7 +255,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git and push to GitHub before moving forward.
 
-## Test Drive an `add` function
+## Exercise #13 Test Drive an `add` function
 - The `add` function should sum two numbers, as long as each input is a number or a string containing a number.
 - Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat (move onto the next test.)
 - Assert that `add`:
@@ -273,7 +273,6 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Refactor, if possible
 - Repeat until the tests are robust and the function works as intented.
 - Commit your work to git and push to GitHub.
-
 
 ## Jasmine Documentation
 - [Jasmine Global Functions](https://jasmine.github.io/api/3.3/global.html)
