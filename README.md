@@ -181,7 +181,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Follow that by adding just enough code inside of the `sayHello` function `code.js` to green that latest test. Recommend checking if the input variable's value is `undefined`.
 - Next, add `expect(sayHello(true)).toBe("Hello, World!")` to the `tests.js` file. Refresh to see the failing red test.
 - Add just enough code to `code.js` to green that latest test. `if (input === true)` then `return "Hello, World!"`
-- Now, add `expect(sayHello(false)).toBe("Hello, World!")` to the `<table></table>ests.js` file. Refresh to see the failing test.
+- Now, add `expect(sayHello(false)).toBe("Hello, World!")` to the `tests.js` file. Refresh to see the failing test.
 - Add just enough code to `code.js` to green this test.
 - Once all the tests are green, identify refactor opportunities and refactor your solution.
 - Are there any other [edge cases](https://en.wikipedia.org/wiki/Edge_case) you want to write a test for? You have a green light to add more of your own tests to "drive" the implementation.
