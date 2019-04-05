@@ -43,7 +43,7 @@ This is an introduction to automated testing in JavaScript. The idea behind auto
     - If you're using IntelliJ, choose New->Project From Version Control->Git and then paste in the clone address.`git clone git@github.com:your-github-username/intro-to-testing-js.git`.
     - If you're using command line, then execute the following command line command: `git clone git@github.com:your-github-username/intro-to-testing-js.git`.
 1. Once cloned to your projects directory, open up the project.
-1. Launch `report.html` in your browser. You should see a set of green tests for the `sayHello` function.
+1. Launch `report.html` in your browser. You should see a set of green tests for the `helloWorld` function.
 1. Refresh `report.html` to re-run new code in `test.js` or `code.js`. Do this any time the test or the implementation code changes.
 
 ### Project Structure
