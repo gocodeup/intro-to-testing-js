@@ -3,6 +3,24 @@
 ## Summary
 This is an introduction to automated testing in JavaScript. The idea behind automated testing is to provide immediate feedback on the code you write to solve a problem, add a feature, or fix a bug. The feedback from the tests comes in the form of green passing tests or red failing tests. Tests are functions that test functions to compare the results of the actual output vs. the expected output.
 
+Specifically, we will be working with "unit tests", as our type of test. A unit means the smallest possible block of functionality. Most frequently, this means a single user-defined function in code. Unit tests aim to test the building blocks of functionality. In this way, they test application code from the inside-out. Other types of test such as end-to-end tests test the entire application from the outside-in
+
+Additionally, we will be using a process called Test Driven Development, commonly called TDD, where we author tests to assert expected vs. actual results before authoring the code that produces those results. While TDD can be used on a variety of types of tests, we'll be applying the TDD workflow and process with unit tests.
+
+## Key Vocabulary
+<dl>
+    <dt>Implementation</dt>
+    <dd>The code the a developer authors to realize the sequence of steps that the code runs to solve a problem (called an algorithm).</dd>    
+    <dt>Refactor</dt>
+    <dd>To refactor means to re-write an implementation. [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) aims to increase the code quality without changing its observable behavior. Developers refactor code to increase readability, increase flexibility, add a fix for edge-case bugs, reduce duplication, or make the code more accessible for yourself and other developers moving forward.</dd>    
+    <dt>Unit</dt>
+    <dd>An individual piece of functionality which is single, whole, and complete but which also forms an individual component of a larger or more complex whole.</dd>
+    <dt>Unit Test</dt>
+    <dd>Unit tests are automated tests that test the accuracy, reliability, and appropriateness of the implementation for a unit of functionality. Unit tests compare the expected vs. actual outputs for user-defined functions when provided various inputs.</dd>
+    <dt>Test Driven Development, TDD</dt>
+    <dd>The practice of writing tests for functionality before writing the implementation of that functionality. Rather than authoring tests after the functionality exists, the TDD workflow aims to use the automated tests to provide feedback before and as the developer authors their implementation</dd>    
+</dl>
+
 ## Overview
 - Green tests are passing, red tests mean that the code is incomplete, inaccurate, missing, or you have a syntax error somewhere in your code.
 - Syntax errors in either the `tests.js` or the `code.js` file will keep things from running accurately. If you go from a page of many green tests to all red, there's likely a typo or syntax errors somewhere.
@@ -25,7 +43,7 @@ This is an introduction to automated testing in JavaScript. The idea behind auto
 2. Step 2: Run all the tests to ensure that the new test fails. We're **supposed** to see a red, failing test, since there's no code yet to green it. Red means we did the first step correctly. Seeing the newest test turn red is critical because our tests drive the development, not the other way around.
 3. Step 3: Write only enough code to green that newest test. No more, no less. It's OK if things are hard-coded here.
 4. Step 4: Run all tests. We're looking for green tests across the board.
-5. Step 5: Refactor the code. [Refactoring](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) means to increase the code quality without changing its observable behavior. This is an opportunity to increase readability, increase flexibility, reduce duplication, or make the code more accessible for yourself and other developers moving forward. 
+5. Step 5: Refactor the code. 
 6. Step 6: Repeat the process by going back to Step 1. The repeat step means  following the steps to add new tests.
 7. Overview: This entire TDD workflow is often explained as the repetition of "Red, Green, Refactor". This encapsulates the idea of writing a single, small failing test, writing only enough code to green the test, and then to refactor, when possible.
 
@@ -273,6 +291,18 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Refactor, if possible
 - Repeat until the tests are robust and the function works as intented.
 - Commit your work to git and push to GitHub.
+
+## Conclusion and completeness
+- With each successive assertion/expectation in a test for a specific function, we make that unit more robust and reliable, and usually easier to refactor.
+- Completeness of the unit: 
+    - If the implementation for an `add` function only passes one assertion that `add(2, 3)` returns `5`, but does not work with any other numbers, then the unit is not considered complete. The implementation is incomplete, and the unit test composed of multiple assertions/expectations should demonstrate this clearly.
+    - Another example: if the `isVowel` function only works for lowercase letters but fails to account , then we would consider the implementation to be incorrect. The "unit" of functionality is incomplete
+    - Another example: 
+- It is not feasible to test an infinite number of inputs with our assertions/expectations in a unit test. To prove that a function works in all cases is a practice closer to mathematical proofs. This is known as [Correctness](https://en.wikipedia.org/wiki/Correctness_(computer_science)) and is outside the scope of most software development due to economic and time constraints. 
+- Moving forward, any time you find a bug in your implementation, here is the best practice:
+    1. Author test code that reproduces that bug in an automated way. This may involve adding one or more assertions/expectations to a unit test. 
+    2. Refactor your implementation, relying on your newly added automated test to guide the solution. 
+    3. Now that the steps to reproduce the bug are part of your test suite, you may move forward with more confidence.
 
 ## Jasmine Documentation
 - [Jasmine Global Functions](https://jasmine.github.io/api/3.3/global.html)
