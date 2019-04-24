@@ -246,9 +246,9 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
         - returns false when executed with `isEven(3)`
         - returns false when called with `isEven("banana")`
         - returns true when called with `isEven("8")`
-        - returns false when called with `isEven(infinity)`
+        - returns false when called with `isEven(Infinity)`
         - return false when called with a boolean input like `isEven(true)` or `isEven(false)`
-        - returns false when calles without an argument like `isEven()`
+        - returns false when called without an argument like `isEven()`
 - Refactor when and where you can. Be careful not to refactor before you have a handful of green tests.
 - Repeat until the tests are robust and the function works as intended.
 - Commit your work to git and push to GitHub before moving forward.
