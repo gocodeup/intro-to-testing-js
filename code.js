@@ -11,3 +11,13 @@ function sayHello(input){
         return "Hello, " + input +"!";
     }
 }
+
+function isFive(input){
+    if(typeof input === "number" && input === 5){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}

@@ -52,3 +52,33 @@ describe('sayHello',function () {
         expect(sayHello([1,2,3,4,5])).toBe("Hello, World!");
     });
 });
+
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a boolean when called', function () {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it('should return false when argument is 4', function () {
+        expect(isFive(4)).toBe(false);
+    });
+    it('should return false when argument is 7', function () {
+        expect(isFive(7)).toBe(false);
+    });
+    it('should return false when argument is 9', function () {
+        expect(isFive(9)).toBe(false);
+    });
+    it('should return true when argument is 5', function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return false when argument is "5"', function () {
+        expect(isFive("5")).toBe(false);
+    });
+    it('should return false when argument is null', function () {
+        expect(isFive(null)).toBe(false);
+    });
+    it('should return false when argument is an array', function () {
+        expect(isFive([1,2,3,4])).toBe(false);
+    });
+});
