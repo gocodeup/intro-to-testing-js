@@ -30,4 +30,25 @@ describe('sayHello',function () {
     it('should return the string "Hello, Pat!', function () {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
+    it('should return the string "Hello, World! when no paramater', function () {
+        expect(sayHello()).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World! when parameter is true', function () {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World! when parameter is false', function () {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World! when parameter is null', function () {
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World! when parameter is 23', function () {
+        expect(sayHello(23)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World! when parameter is empty string', function () {
+        expect(sayHello("")).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World! when parameter is an array', function () {
+        expect(sayHello([1,2,3,4,5])).toBe("Hello, World!");
+    });
 });
