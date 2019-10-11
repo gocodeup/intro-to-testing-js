@@ -130,5 +130,26 @@ describe('isVowel', function() {
     it('should return a boolean when called', function() {
         expect(typeof isVowel()).toBe("boolean");
     });
+    it('should return false when called with 3', function() {
+        expect(isVowel(3)).toBe(false);
+    });
+    it('should return true when called with "a"', function() {
+        expect(isVowel("a")).toBe(true);
+    });
+    it('should return true when called with "A"', function() {
+        expect(isVowel("A")).toBe(true);
+    });
+    it('should return false when called with "y"', function() {
+        expect(isVowel("y")).toBe(false);
+    });
+    it('should return false when called with false', function() {
+        expect(isVowel(false)).toBe(false);
+    });
+    it('should return false when called with true', function() {
+        expect(isVowel(true)).toBe(false);
+    });
+    it('should return false when called empty', function() {
+        expect(isVowe()).toBe(false);
+    });
 
 });

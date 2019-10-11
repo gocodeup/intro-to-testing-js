@@ -20,12 +20,33 @@ function isFive(input){
         return false;
     }
 
+    return !isNaN(parseFloat(input)) === 5;
+
 }
 
 function isEven(input){
     return parseFloat(input) % 2 === 0;
 }
 
-function isVowel() {
-    return true;
+function isVowel(input) {
+    if(input){
+        switch (input) {
+            case "a":
+            case "A":
+            case "e":
+            case "E":
+            case "I":
+            case "i":
+            case "o":
+            case  "O":
+            case "u":
+            case "U":
+                return true;
+                break;
+        }
+    }
+    else{
+        return false;
+    }
+
 }
