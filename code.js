@@ -38,10 +38,13 @@ function isVowel(input) {
             case "I":
             case "i":
             case "o":
-            case  "O":
+            case "O":
             case "u":
             case "U":
                 return true;
+                break;
+            default:
+                return false;
                 break;
         }
     }

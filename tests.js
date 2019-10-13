@@ -142,6 +142,9 @@ describe('isVowel', function() {
     it('should return false when called with "y"', function() {
         expect(isVowel("y")).toBe(false);
     });
+    it('should return false when called with "Z"', function() {
+        expect(isVowel("Z")).toBe(false);
+    });
     it('should return false when called with false', function() {
         expect(isVowel(false)).toBe(false);
     });
@@ -149,7 +152,7 @@ describe('isVowel', function() {
         expect(isVowel(true)).toBe(false);
     });
     it('should return false when called empty', function() {
-        expect(isVowe()).toBe(false);
+        expect(isVowel()).toBe(false);
     });
 
 });
