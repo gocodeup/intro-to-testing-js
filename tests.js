@@ -14,6 +14,7 @@ describe('helloWorld', function() {
     });
 });
 
+// Unit tests for the sayHello function
 describe('sayHello',function () {
     it('should be a defined function', function () {
         expect(typeof sayHello).toBe('function');
@@ -53,6 +54,7 @@ describe('sayHello',function () {
     });
 });
 
+// Unit tests for the isFive function
 describe('isFive', function() {
     it('should be a defined function', function() {
         expect(typeof isFive).toBe('function');
@@ -83,6 +85,7 @@ describe('isFive', function() {
     });
 });
 
+// Unit tests for the isEven function
 describe('isEven', function() {
     it('should be a defined function', function() {
         expect(typeof isEven).toBe('function');
@@ -123,6 +126,7 @@ describe('isEven', function() {
 
 });
 
+// Unit tests for the isVowel function
 describe('isVowel', function() {
     it('should be a defined function', function() {
         expect(typeof isVowel).toBe('function');
@@ -155,4 +159,38 @@ describe('isVowel', function() {
         expect(isVowel()).toBe(false);
     });
 
+});
+
+// Unit tests for the add function
+describe('add', function() {
+    it('should be a defined function', function() {
+        expect(typeof add).toBe('function');
+    });
+    it('should return 5 when adding 3 and 2', function() {
+        expect(add(3,2)).toBe(5);
+    });
+    it('should return -12 when adding -3 and -9', function() {
+        expect(add(-3,-9)).toBe(-12);
+    });
+    it('should return -5 when adding 5 and -10', function() {
+        expect(add(5,-10)).toBe(-5);
+    });
+    it('should return 11 when adding "5" and 6', function() {
+        expect(add("5",6)).toBe(11);
+    });
+    it('should return 6 when adding "-4" and "10"', function() {
+        expect(add("-4","10")).toBe(6);
+    });
+    it('should return 38 when adding "8" and "30"', function() {
+        expect(add("8","30")).toBe(38);
+    });
+    it('should return NaN when adding "banana" and "split"', function() {
+        expect(add("banana","split")).toBeNaN();
+    });
+    it('should return NaN when adding 2 and "apples"', function() {
+        expect(add(2,"apples")).toBeNaN();
+    });
+    it('should return NaN when empty"', function() {
+        expect(add()).toBeNaN();
+    });
 });
