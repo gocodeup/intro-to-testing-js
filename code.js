@@ -19,9 +19,6 @@ function isFive(input){
     else{
         return false;
     }
-
-    return !isNaN(parseFloat(input)) === 5;
-
 }
 
 function isEven(input){
@@ -29,8 +26,7 @@ function isEven(input){
 }
 
 function isVowel(input) {
-    if(input){
-        switch (input) {
+    switch (input) {
             case "a":
             case "A":
             case "e":
@@ -46,15 +42,9 @@ function isVowel(input) {
             default:
                 return false;
                 break;
-        }
     }
-    else{
-        return false;
-    }
-
 }
 
 function add(x, y){
-
     return parseFloat(x) + parseFloat(y);
 }
