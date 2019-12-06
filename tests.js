@@ -11,8 +11,11 @@ describe('name for test', function() {
 });
 
 describe('sayHello', function() {
-    it('Should be a defined function', function() {
-        expect(typeof sayHello).toBe('function');
+    it("Should be a defined function", function() {
+        expect(typeof sayHello).toBe("function");
+    });
+    it("Should return a string when called", function() {
+        expect(typeof sayHello()).toBe("string");
     });
 });
 
