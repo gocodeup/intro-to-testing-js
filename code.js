@@ -10,5 +10,9 @@ var helloWorld = function() {
 var test = true;
 
 function sayHello(input) {
-    return "Hello, " + input + "!";
+    if(typeof input === 'string' && input.length > 0) {
+        return "Hello, " + input + "!";
+    } else {
+        return "Hello, World!";
+    }
 };
