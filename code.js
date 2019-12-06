@@ -8,3 +8,7 @@ var helloWorld = function() {
 }
 
 var test = true;
+
+function sayHello() {
+
+};
