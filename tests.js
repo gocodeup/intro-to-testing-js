@@ -27,23 +27,33 @@
 // });
 
 // Unit tests for the sayHello function
-describe('sayHello', function() {
+// describe('sayHello', function() {
+//     it('should be a defined function', function() {
+//         expect(typeof sayHello).toBe('function');
+//     });
+//     it('should return a string when called', function() {
+//         expect(typeof sayHello()).toBe("string");
+//     });
+//     it('should return the string "Hello, Jane!"', function() {
+//         expect(sayHello("Jane")).toBe("Hello, Jane!");
+//     });
+//     it('should return the string "Hello, Alex!"', function() {
+//         expect(sayHello("Alex")).toBe("Hello, Alex!");
+//     });
+//     it('should return the string "Hello, Pat!"', function() {
+//         expect(sayHello("Pat")).toBe("Hello, Pat!");
+//     });
+//     it('should return the string "Hello, World!"', function() {
+//         expect(sayHello(false)).toBe("Hello, World!");
+//     });
+// });
+
+// Unit tests for the isFive function
+describe('isFive', function() {
     it('should be a defined function', function() {
-        expect(typeof sayHello).toBe('function');
+        expect(typeof isFive).toBe('function');
     });
-    it('should return a string when called', function() {
-        expect(typeof sayHello()).toBe("string");
-    });
-    it('should return the string "Hello, Jane!"', function() {
-        expect(sayHello("Jane")).toBe("Hello, Jane!");
-    });
-    it('should return the string "Hello, Alex!"', function() {
-        expect(sayHello("Alex")).toBe("Hello, Alex!");
-    });
-    it('should return the string "Hello, Pat!"', function() {
-        expect(sayHello("Pat")).toBe("Hello, Pat!");
-    });
-    it('should return the string "Hello, World!"', function() {
-        expect(sayHello(false)).toBe("Hello, World!");
+    it('should return as a boolean', function() {
+        expect(typeof isFive).toEqual('boolean');
     });
 });
