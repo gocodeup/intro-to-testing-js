@@ -13,7 +13,9 @@ var test = true;
 //exercise 06 -- complete
 
 //exercise 2//
-var sayHello = function(){
-    return "Hello"
+var sayHello = function(name) {
+   return "Hello, " + name + "!"
+
 }
+sayHello("frank");
 //exercise 3//
