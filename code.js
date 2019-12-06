@@ -12,7 +12,8 @@ var test = true;
 //exercise 05 -- complete
 //exercise 06 -- complete
 
-//exercise 1//
-function sayHello(){
-
+//exercise 2//
+var sayHello = function(){
+    return "Hello"
 }
+//exercise 3//
