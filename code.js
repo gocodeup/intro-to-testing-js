@@ -10,9 +10,6 @@ var helloWorld = function() {
 var test = true;
 
 function sayHello(input) {
-    if(typeof input === 'string' && input.length > 0) {
-        return "Hello, " + input + "!";
-    } else {
-        return "Hello, World!";
-    }
-};
+    return (typeof input === 'string' && input.length > 0 && isNaN(input)) ?
+        "Hello, " + input + "!" : "Hello, World!";
+}

@@ -26,6 +26,12 @@ describe('sayHello', function() {
     it("Should return 'Hello World' when passed an empty string", function() {
         expect(sayHello("")).toBe("Hello, World!");
     });
+    it("Should return 'Hello World' when passed 2.3", function() {
+        expect(sayHello(2.3)).toBe("Hello, World!");
+    });
+    it("Should return 'Hello World' when passed '5'", function() {
+        expect(sayHello('5')).toBe("Hello, World!");
+    });
     it("Should return 'Hello World' when passed true boolean", function() {
         expect(sayHello(true)).toBe("Hello, World!");
     });
