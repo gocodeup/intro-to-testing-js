@@ -13,3 +13,30 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+
+
+
+describe('sayHello', function() {
+    it('should be a defined function', function () {
+        expect(typeof sayHello).toBe('function');
+    });
+});
+
+
+
+// describe('name for test', function(){
+//     it ('this is the label for this test' function(){
+//         expect(test).toBeDefined(false);
+//     });
+//     it('to be', function(){
+//         expect(test).toBe(true);
+//     });
+//     it('not to be', function(){
+//         expect(test).not.toBe(false);
+//     });
+// });
+//
+
+
+
+
