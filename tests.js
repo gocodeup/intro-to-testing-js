@@ -13,3 +13,11 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+
+
+//Unit test for sayHello function
+describe('helloWorld', function() {
+    it('should be a defined function', function() {
+        expect(typeof helloWorld).toBe('function');
+    });
+});
