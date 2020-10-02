@@ -1,28 +1,23 @@
-// helloWorld function 
-function helloWorld() {
-    return "Hello, World!";
-}
-function sayHello(){
-    return "";
-}
-function sayHello(){
-    return 'Hello, Jane!';
-}
-function sayHello(input){
-    if( input==='Alex') {
-        return 'Hello, Alex!';
-    }else{
-        return 'Hello, Jane!';}
-}
-function sayHello(input){
-    if( input==='Pat') {
-        return 'Hello, Pat!';
-    }else if (input==='Alex'){
-        return 'Hello, Alex!';
-    } else {
-        return 'Hello, Jane!'
+function sayHello(name){
+    if(typeof name == 'undefined' || typeof name == 'boolean'){
+        return "Hello, World!";
     }
+    return "Hello, " + name + "!";
 }
-function sayHello(input){
-    return "Hello, " + input + "!";
+
+function helloWorld(){
+return "Hello, World!";
+}
+
+function isFive(input){
+return Number(input)===5;
+}
+function add(numberOne,numberTwo){
+return numberOne+numberTwo;
+}
+function isVowel(){
+
+}
+function isEven(){
+
 }
