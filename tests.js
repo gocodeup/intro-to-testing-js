@@ -93,13 +93,17 @@ describe('isFive', function() {
     });
 
     describe('isVowel', function () {
-        it('should return boolean value', function () {
-            expect(isVowel(Boolean)).toBe(typeof Boolean)
+        it('should be a defined function', function () {
+            expect(typeof isVowel()).toBe('function')// check
         });
-        it('should return true when \'a\' is passed', function () {
+
+        it('should return boolean no matter what', function () {
+            expect(isVowel("boolean")).toBe(typeof "boolean")
+        });
+        it("should return true when 'a' is passed", function () {
             expect(isVowel(true)).toBe('a')
         });
-        it('should return true when \'A\' is passed', function () {
+        it("should return true when 'A' is passed", function () {
             expect(isVowel(true)).toBe('A')
         });
         it('should return false when 4 is passed', function () {
@@ -120,9 +124,8 @@ describe('isFive', function() {
     });
 
 describe('add', function() {
-
-    t('should be a defined function', function () {
-        expect(typeof add).toBe('function')// check
+    it('should be a defined function', function () {
+        expect(typeof add).toBe('function')
     });
 
     it('should return 5 as sum of 2 and 3 are passed', function () {
@@ -132,18 +135,18 @@ describe('add', function() {
         expect(add(-9, - 3)).toBe(-12)
     });
     it('should return 11 when 5 and 6 are passed', function () {
-        expect(add(5 + 6)).toBe(11)
+        expect(add(5 , 6)).toBe(11)
     });
     it('should  return -6 when -4 and -10 are passed', function () {
-        expect(add(-9 - 3)).toBe(12)
+        expect(add(-6 ,- 4)).toBe(-10)
     });
-    it('should  return \'Nan\' when strings are passed', function () {
-        expect(add("banana","split")).toBe("Nan")
+    it("should  return Nan when strings are passed", function () {
+        expect(add("banana","split")).toBe("NaN")
     });
-    it("should  return \'Nan\' when add(2,\"apples\" is passed", function () {
-        expect(add(2,"apples")).toBe("Nan")
+    it("should  return Nan when add(2,apples) is passed", function () {
+        expect(add(2,"apples")).toBe("NaN")
     });
-    it('should  return \'Nan\' when no parameters are passed', function () {
+    it("should  return Nan when no parameters are passed", function () {
         expect(add()).toBe("NaN")
     });
 });
