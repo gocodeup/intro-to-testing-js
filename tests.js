@@ -47,43 +47,43 @@ describe('isFive', function() {
     it('should be a defined function', function () {
         expect(typeof isFive).toBe('function')
     });
-    it('should return boolean value', function () {
-        expect(typeof isFive()).toBe('boolean')// check
+    it('should return boolean value no irrespective of input type', function () {
+        expect(typeof isFive()).toBe('boolean');
+    });
+    it('should return "true" when 5 is passed', function () {
+        expect(isFive("5")).toBe(true);
     });
     it('should return true when 5 is passed', function () {
-        expect(isFive("5")).toBe(true)
-    });
-    it('should return true when "5" is passed', function () {
-        expect(isFive(5)).toBe(true)
+        expect(isFive(5)).toBe(true);
     });
 });
 
     describe('isEven', function () {
         it('should be a defined function', function () {
-            expect(typeof isEven).toBe('function')// check
+            expect(typeof isEven).toBe('function');
         });
         it('should return boolean value', function () {
             expect(typeof isEven()).toBe('boolean')
         });
-        it('should return true when isEven(2)', function () {
+        it('should return "true" when 2 is passed', function () {
             expect(isEven(2)).toBe(true)
         });
-        it('should return true when isEven(-4 )is passed', function () {
+        it('should return "true" when -4 is passed', function () {
             expect(isEven(-4)).toBe(true)
         });
-        it('should return false when isEven("banana") is passed', function () {
+        it('should return "false" when "banana" is passed', function () {
             expect(isEven("banana")).toBe(false)
         });
-        it('should return false when Infinity is passed', function () {
+        it('should return "false" when Infinity is passed', function () {
             expect(isEven(Infinity)).toBe(false)
         });
-        it('should return true when 8 is passed', function () {
+        it('should return "true" when 8 is passed', function () {
             expect(isEven(8)).toBe(true)
         });
-        it('should return false when  isEven(3) is passed', function () {
+        it('should return "false" when  3 is passed', function () {
             expect(isEven(3)).toBe(false)
         });
-        it('should return false when no arguments are passed', function () {
+        it('should return "false" when no arguments are passed', function () {
             expect( isEven()).toBe(false)
         });it('should return "false" when passed a boolean', function() {
             expect(isEven(true)).toBe(false);
@@ -94,32 +94,32 @@ describe('isFive', function() {
 
     describe('isVowel', function () {
         it('should be a defined function', function () {
-            expect(typeof isVowel()).toBe('function')// check
+            expect(typeof isVowel()).toBe('function')
         });
 
-        it('should return boolean no matter what', function () {
-            expect(isVowel("boolean")).toBe(typeof "boolean")
+        it('should return boolean no matter the input', function () {
+            expect(isVowel()).toBe(typeof "boolean");
         });
-        it("should return true when 'a' is passed", function () {
-            expect(isVowel(true)).toBe('a')
+        it("should return 'true' when 'a' is passed", function () {
+            expect(isVowel('a')).toBe(true);
         });
-        it("should return true when 'A' is passed", function () {
-            expect(isVowel(true)).toBe('A')
+        it("should return 'true' when 'A' is passed", function () {
+            expect(isVowel('A')).toBe(true);
         });
-        it('should return false when 4 is passed', function () {
-            expect(isVowel(false)).toBe(4)
+        it('should return "false" when 4 is passed', function () {
+            expect(isVowel(4)).toBe(false);
         });
         it('should return false when \'y\' is passed', function () {
-            expect(isVowel(false)).toBe('y')
+            expect(isVowel('y')).toBe(false);
         });
-        it('should return false', function () {
+        it('should return "false"', function () {
             expect(isVowel(false)).toBe(isVowel(true) || isVowel(false))
         })
-        ;it('should return false when "banana" is passed', function () {
-            expect(isVowel(false)).toBe("banana")
+        ;it('should return "false" when "banana" is passed', function () {
+            expect(isVowel('banana')).toBe(false)
         })
-        ;it('should return false when no parameter is passed', function () {
-            expect(isVowel(false)).toBe(isVowel())
+        ;it('should return "false" when no parameter is passed', function () {
+            expect(isVowel()).toBe(false);
         });
     });
 
@@ -129,24 +129,24 @@ describe('add', function() {
     });
 
     it('should return 5 as sum of 2 and 3 are passed', function () {
-        expect(add(2 , 3)).toBe(5)
+        expect(add(2 , 3)).toBe(5);
     });
     it('should  return -12 when -3 and -9 are passed', function () {
-        expect(add(-9, - 3)).toBe(-12)
+        expect(add(-9, - 3)).toBe(-12);
     });
     it('should return 11 when 5 and 6 are passed', function () {
-        expect(add(5 , 6)).toBe(11)
+        expect(add(5 , 6)).toBe(11);
     });
     it('should  return -6 when -4 and -10 are passed', function () {
-        expect(add(-6 ,- 4)).toBe(-10)
+        expect(add(-6 ,- 4)).toBe(-10);
     });
     it("should  return Nan when strings are passed", function () {
-        expect(add("banana","split")).toBe("NaN")
+        expect(add("banana","split")).toBe("NaN");
     });
     it("should  return Nan when add(2,apples) is passed", function () {
-        expect(add(2,"apples")).toBe("NaN")
+        expect(add(2,"apples")).toBe("NaN");
     });
     it("should  return Nan when no parameters are passed", function () {
-        expect(add()).toBe("NaN")
+        expect(add()).toBe("NaN");
     });
 });
