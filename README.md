@@ -43,7 +43,7 @@ Additionally, we will be using a process called Test Driven Development, commonl
 2. Step 2: Run all the tests to ensure that the new test fails. We're **supposed** to see a red, failing test, since there's no code yet to green it. Red means we did the first step correctly. Seeing the newest test turn red is critical because our tests drive the development, not the other way around.
 3. Step 3: Write only enough code to green that newest test. No more, no less. It's OK if things are hard-coded here.
 4. Step 4: Run all tests. We're looking for green tests across the board.
-5. Step 5: Refactor the code. 
+5. Step 5: Refactor the code.
 6. Step 6: Repeat the process by going back to Step 1. The repeat step means  following the steps to add new tests.
 7. Overview: This entire TDD workflow is often explained as the repetition of "Red, Green, Refactor". This encapsulates the idea of writing a single, small failing test, writing only enough code to green the test, and then to refactor, when possible.
 
@@ -55,9 +55,9 @@ Additionally, we will be using a process called Test Driven Development, commonl
 ## Getting Started
 1. Fork this repository to make a copy on your own GitHub account.
 1. Make sure that your browser is showing this project in your own repositories list in your own account.
-1. Click the green button on the right that says "Clone or Download". 
+1. Click the green button on the right that says "Clone or Download".
 1. The clone address should look like `git@github.com:your-github-username/intro-to-testing-js.git`, where `your-github-username` is actually your own username on GitHub.
-1. Once you've copied your repo's clone address, it's time to clone the project in one of two ways: 
+1. Once you've copied your repo's clone address, it's time to clone the project in one of two ways:
     - If you're using IntelliJ, choose New->Project From Version Control->Git and then paste in the clone address.`git clone git@github.com:your-github-username/intro-to-testing-js.git`.
     - If you're using command line, then execute the following command line command: `git clone git@github.com:your-github-username/intro-to-testing-js.git`.
 1. Once cloned to your projects directory, open up the project.
@@ -77,20 +77,20 @@ Additionally, we will be using a process called Test Driven Development, commonl
     - What do you notice about the test results?
     - What are some ways you think we could get the tests to turn green again?
     - Set the function name in `code.js` back to `helloWorld` and re-run the tests.
-    
+
 1. Inside of the `helloWorld` function in `code.js`, replace `return "Hello, World!"` with `return "Hello"`.
     - Run the tests by refreshing `report.html` in your browser.
     - Which tests fail? Which tests are still green?
     - Set the implementation back to `return "Hello, World!"`
 
 1. Inside of the `helloWorld` function in `code.js`, change the line `return "Hello, World!"` to `console.log("Hello, World!")`. Then refresh `report.html`.
-    - What happens to the tests? Identify which tests stay green and which ones turn red. 
+    - What happens to the tests? Identify which tests stay green and which ones turn red.
     - Why do you think that is?
     - Consider, what is the return value of a `console.log`? *hint*, it's always the same
     - Consider, what is the return value of a `return`?
     - Fix your `helloWorld` implementation so that it greens all the tests.
 
-1. Now, let's purposefully put a syntax error into the `helloWorld` function, to see what happens with the tests. 
+1. Now, let's purposefully put a syntax error into the `helloWorld` function, to see what happens with the tests.
     - Open up `code.js` and remove the closing curly brace from the end of the `helloWorld` function definition.
     - Refresh `report.html` in your browser.
     - Fix the syntax error and confirm that tests are all green.
@@ -128,9 +128,9 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Step 6: The last TDD step is to "repeat" the process of adding another test. What we're going to do is add our work to git and then move to Exercise #2, which is to add the second test.
 
 ### Before proceeding, add your work to GitHub!
-- Open your terminal and navigate to the local directory where you cloned this project. 
+- Open your terminal and navigate to the local directory where you cloned this project.
 - First, `git status`. Notice which files are tracked by git and which files have changes.
-- Second, type `git add -A` to tell git that you want to get all the changed files staged for commit. 
+- Second, type `git add -A` to tell git that you want to get all the changed files staged for commit.
 - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
 - Next, type `git commit -m "add the first test and solution for intro-to-testing"`
 - Type `git status`, again, to make sure that all files are added and committed.
@@ -140,8 +140,8 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - New tests will each have their own `expect`, `it`,  the `describe`
 - Step 1: The smallest possible test, now that the function exists, is to ensure that calling the function gives us a string. Inside of `tests.js`, add an assertion to `sayHello` that it "should return a string when called.". The test should look similar to `expect(typeof sayHello()).toBe("string")`
 - Step 2: Run all tests to make sure that the new test starts red.
-- Step 3: Have your `sayHello` function return a string. The simplest code and smallest change possible is to return an empty string `return ""`. 
-- Step 4: Now, run all the tests to ensure that the previously red test is now turned green by our impelementation. 
+- Step 3: Have your `sayHello` function return a string. The simplest code and smallest change possible is to return an empty string `return ""`.
+- Step 4: Now, run all the tests to ensure that the previously red test is now turned green by our impelementation.
 - Step 5: There's nothing to refactor.
 - Step 6: Repeat (Repeat the process by moving to build the next, small test)
 - Always: Add, commit, and push your work to GitHub.
@@ -155,7 +155,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Step 6: Repeat step means to add another test, so let's move to the next exercise.
 
 ### Exercise #4 Add another small, simple test
-- Step 1:  In `tests.js`, assert that `sayHello("Alex")` returns `"Hello, Alex!"`. Our first test should be *super* simple and *super* small. This means that our next test should look like `expect(sayHello("Alex")).toBe("Hello, Alex!")`. 
+- Step 1:  In `tests.js`, assert that `sayHello("Alex")` returns `"Hello, Alex!"`. Our first test should be *super* simple and *super* small. This means that our next test should look like `expect(sayHello("Alex")).toBe("Hello, Alex!")`.
 - Step 2: Run all tests and make sure that this newly added test is red.
 - Step 3: It's challenging not to jump to the "correct" answer already, but let's stay close to the TDD method. Write *just* enough code to green the test. This means making sure that the `sayHello` function definition inside of `code.js` takes an an input argument. If `input === "Alex"`, then we `return "Hello, Alex!"` else `return "Hello, Jane!"`. Don't get too fancy. A cornerstone of TDD is refactoring only once you have a handful of green tests, not just one or two with new inputs.
 - Step 4: Run all tests, expecting that all are now green. Does each test turn green? If so, then we can proceed. We can't refactor unless we have greened a test, even with a hard-coded implementation.
@@ -164,19 +164,19 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 
 ### Exercise #5 One more test before refactoring...
 - Step 1: Add another (tiny) assertion! In `tests.js`, assert that `sayHello("Pat")` returns `"Hello, Pat!"`. Since our tests should be super simple, the assertion should be `expect(sayHello("Pat")).toBe("Hello, Pat!")`
-- Step 2: Run all tests and make sure that this newly added test is red and failing. 
+- Step 2: Run all tests and make sure that this newly added test is red and failing.
 - Step 3: Again, you may feel the urge to jump to the "correct" answer already. Let's stay on target. Write *just* enough code to green the test. For this case, *just enough* code means adding another conditional such that if `input === "Pat"`, then the function should have `return "Hello, Pat!"`.
-- Step 4: Run all tests. Does each test turn green? If so, then we can proceed. 
+- Step 4: Run all tests. Does each test turn green? If so, then we can proceed.
 - Step 5: Refactor! It's definitely refactoring time!
 
 ### When to Refactor
 - How do we know that it's time to refactor? The answer: Once we have a handful of green tests, but the logic feels hard-coded, funky, or incomplete, then it's probably refactoring time.
-- Notice that when the input is "Jane", "Pat", or "Alex", the tests green. But what if we sent in any other name as the argument? 
+- Notice that when the input is "Jane", "Pat", or "Alex", the tests green. But what if we sent in any other name as the argument?
 - When every new test means that we're adding another `if` or `else if` to the code, is there a better way of doing things?
 - Refactoring is only possible once we have a handful of passing, green tests. These give us safety and guidance.
 - This may feel slow, but each new test cycle should only take 2-3 minutes, if not shorter!
-- Since our goal is to have a sayHello function that says hello to any input string, then adding a new conditional for each input is not scalable. 
-- In the TDD approach, refactoring is only possible if you have enough tests and enough code that all the tests are green. In this way, your tests provide a target for the refactor. If your refactoring fails tests that    
+- Since our goal is to have a sayHello function that says hello to any input string, then adding a new conditional for each input is not scalable.
+- In the TDD approach, refactoring is only possible if you have enough tests and enough code that all the tests are green. In this way, your tests provide a target for the refactor. If your refactoring fails tests that
 
 ### Exercise #6 Implement the refactor!
 - Inside `sayHello` in `code.js`, what's a change you can identify that will improve the overall functioning of this function?
@@ -188,11 +188,11 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - "If your code ain't checked-in to source control, then it doesn't exist."
 - In your terminal, ensure that the `pwd` command shows that you're in the directory for this project.
 - First, `git status`. Notice which files are tracked by git and which files have changes.
-- Second, type `git add -A` to tell git that you want to get all the changed files staged for commit. 
+- Second, type `git add -A` to tell git that you want to get all the changed files staged for commit.
 - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
 - Next, type `git commit -m "add tests and ability to say 'hello' to any input."`
 - Type `git status`, again, to make sure that all files are added and committed.
-- Finally, push your work with `git push`. 
+- Finally, push your work with `git push`.
 
 ### Exercise #8 "Repeat" step (where we look for additional tests to add)
 - First, in `tests.js`, add `expect(sayHello()).toBe("Hello, World!")`. Then refresh `report.html` to see the failing test.
@@ -214,11 +214,11 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - "If your code ain't checked-in to source control, then it doesn't exist."
 - In your terminal, ensure that the `pwd` command shows that you're in the directory for this project.
 - First, `git status`. Notice which files are tracked by git and which files have changes.
-- Second, type `git add -A` to tell git that you want to get all the changed files staged for commit. 
+- Second, type `git add -A` to tell git that you want to get all the changed files staged for commit.
 - Now, type `git status`. You should see file names in green. This means that the files are ready for commit.
 - Next, type `git commit -m "unit tests for edge cases."`
 - Type `git status`, again, to make sure that all files are added and committed.
-- Finally, push your work with `git push`. 
+- Finally, push your work with `git push`.
 
 ## Exercise #10 Let's Test-Drive an `isFive` function!
 - Inside of `tests.js`, write a `describe` block for our new `isFive` function.
@@ -229,14 +229,14 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - What other tests and implementation cycles should you do for `isFive`?
     - Ensure that isFive returns a boolean no matter what the input
     - Ensure that isFive returns true when passed 5
-    - What about if we pass in the string `"5"`? Do you want isFive to return true for that? 
+    - What about if we pass in the string `"5"`? Do you want isFive to return true for that?
     - If so, write the test, ensure that the test is failing, and then write the implementation
 - Commit your work to git and push to GitHub before moving forward.
 
 ## Exercise #11 TDD process for testing and creating an `isEven` function
 - Start with the smallest tests first. Assert that the function is defined.
 - Write just enough code to green the test
-- Build up functionality one small piece at a time. 
+- Build up functionality one small piece at a time.
 - Write each assertion, confirm the test fails, write only enough code to green that specific test, refactor, then repeat.
     - Remember to add and then "green" one test at a time. That's part of the fundamental approach of TDD.
     - Assert that isEven:
@@ -294,14 +294,14 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 
 ## Conclusion and completeness
 - With each successive assertion/expectation in a test for a specific function, we make that unit more robust and reliable, and usually easier to refactor.
-- Completeness of the unit: 
+- Completeness of the unit:
     - If the implementation for an `add` function only passes one assertion that `add(2, 3)` returns `5`, but does not work with any other numbers, then the unit is not considered complete. The implementation is incomplete, and the unit test composed of multiple assertions/expectations should demonstrate this clearly.
     - Another example: if the `isVowel` function only works for lowercase letters but fails to account , then we would consider the implementation to be incorrect. The "unit" of functionality is incomplete
-    - Another example: 
-- It is not feasible to test an infinite number of inputs with our assertions/expectations in a unit test. To prove that a function works in all cases is a practice closer to mathematical proofs. This is known as [Correctness](https://en.wikipedia.org/wiki/Correctness_(computer_science)) and is outside the scope of most software development due to economic and time constraints. 
+    - Another example:
+- It is not feasible to test an infinite number of inputs with our assertions/expectations in a unit test. To prove that a function works in all cases is a practice closer to mathematical proofs. This is known as [Correctness](https://en.wikipedia.org/wiki/Correctness_(computer_science)) and is outside the scope of most software development due to economic and time constraints.
 - Moving forward, any time you find a bug in your implementation, here is the best practice:
-    1. Author test code that reproduces that bug in an automated way. This may involve adding one or more assertions/expectations to a unit test. 
-    2. Refactor your implementation, relying on your newly added automated test to guide the solution. 
+    1. Author test code that reproduces that bug in an automated way. This may involve adding one or more assertions/expectations to a unit test.
+    2. Refactor your implementation, relying on your newly added automated test to guide the solution.
     3. Now that the steps to reproduce the bug are part of your test suite, you may move forward with more confidence.
 
 ## Jasmine Documentation
