@@ -42,3 +42,6 @@ function sayHello(insertName){
 }
 
 
+function sayHello(insertName){
+return '';
+}
