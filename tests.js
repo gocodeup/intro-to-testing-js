@@ -31,3 +31,12 @@ describe('sayHello', function() {
         expect(sayHello()).not.toBe(undefined);
         });
 })
+
+describe('sayHello', function() {
+    //return a string when called.
+    it('should return a string when called', function() {
+        expect(typeof sayHello()).toBe("string");
+    });
+
+})
+
