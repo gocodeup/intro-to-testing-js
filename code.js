@@ -37,7 +37,8 @@ function helloWorld() {
 //--- Exercise #1 Take your first "Test Drive" by writing your first test!
 
 function sayHello(insertName){
-    return "Hello "+ insertName;
+    return (insertName === undefined || typeof insertName === "boolean") ? "Hello World" : "Hello "+ insertName;
+
 }
 
 

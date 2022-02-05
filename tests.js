@@ -20,28 +20,33 @@ describe('sayHello', function() {
     it('should be a defined function', function() {
         expect(typeof sayHello).toBe('function');
     });
-})
-
-describe('sayHello', function() {
     it('should return a string when called', function() {
         expect(typeof sayHello()).toBe("string");
     });
 })
 
+//--- All names
 describe('sayHello', function() {
     it('should return the string "Hello Jane" when executed', function() {
         expect(sayHello('Jane')).toBe("Hello Jane");
     });
-})
-
-describe('sayHello', function() {
     it('should return the string "Hello Jane" when executed', function() {
         expect(sayHello("Alex")).toBe("Hello Alex");
     });
-})
-
-describe('sayHello', function() {
     it('should return the string "Hello Jane" when executed', function() {
         expect(sayHello("Pat")).toBe("Hello Pat");
     });
 })
+//----- Exercise #8
+describe('sayHello', function() {
+    it('should return the string "Hello World" when executed', function() {
+        expect(sayHello()).toBe("Hello World")
+    });
+    it('should return the string "Hello World" when executed', function() {
+        expect(sayHello(false)).toBe("Hello, World!")
+    })
+    it('should return the string "Hello World" when executed', function() {
+        expect(sayHello(true)).toBe("Hello World")
+    })
+})
+
