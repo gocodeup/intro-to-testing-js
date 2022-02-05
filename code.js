@@ -37,8 +37,7 @@ function helloWorld() {
 //--- Exercise #1 Take your first "Test Drive" by writing your first test!
 
 function sayHello(insertName){
-    let sayHelloVar = "Hello "+ insertName;
-    return sayHelloVar;
+    return "Hello "+ insertName;
 }
 
 
