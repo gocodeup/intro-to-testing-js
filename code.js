@@ -43,9 +43,18 @@ function sayHello(insertName){
 
 //--- Exercise #10
 function isFive(insertNumber){
-    return insertNumber == 5 ? true : false;
+    return insertNumber == 5
 }
 //--- Exercise #11
 function isEven(num){
-    return (num % 2 == 0 && !(typeof num == "boolean")) ? true : false;
+    return num % 2 == 0 && !(typeof num == "boolean")
 }
+//--- Exercise #12
+function isVowel(char) {
+    return char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u' || char === 'A'
+}
+
+//------------------- Exercise #13
+function add(num1, num2){
+    return (isNaN(num1) && isNaN(num2)) ? NaN : Number(num1) + Number(num2);
+    }
