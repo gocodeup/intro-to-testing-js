@@ -45,3 +45,7 @@ function sayHello(insertName){
 function isFive(insertNumber){
     return insertNumber == 5 ? true : false;
 }
+//--- Exercise #11
+function isEven(num){
+    return (num % 2 == 0 && !(typeof num == "boolean")) ? true : false;
+}
