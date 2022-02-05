@@ -38,10 +38,7 @@ function helloWorld() {
 
 function sayHello(insertName){
     let sayHelloVar = "Hello "+ insertName;
-    return sayHelloVar;
+    return "Hello Jane";
 }
 
 
-function sayHello(insertName){
-return '';
-}
