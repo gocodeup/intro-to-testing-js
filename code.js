@@ -38,7 +38,7 @@ function helloWorld() {
 
 function sayHello(insertName){
     let sayHelloVar = "Hello "+ insertName;
-    return "Hello Jane";
+    return sayHelloVar;
 }
 
 
