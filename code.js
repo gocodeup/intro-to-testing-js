@@ -54,6 +54,7 @@ function isVowel(char) {
     return char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u' || char === 'A'
 }
 
+
 //------------------- Exercise #13
 function add(num1, num2){
     return (isNaN(num1) && isNaN(num2)) ? NaN : Number(num1) + Number(num2);
