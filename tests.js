@@ -151,7 +151,7 @@ describe('isVowel',function (){
     });
 })
 
-//--- Exercise #12
+//--- Exercise  #13
 describe('add',function (){
     // Test for its a function
     it('should be a defined function', function() {
