@@ -176,7 +176,9 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Refactoring is only possible once we have a handful of passing, green tests. These give us safety and guidance.
 - This may feel slow, but each new test cycle should only take 2-3 minutes, if not shorter!
 - Since our goal is to have a sayHello function that says hello to any input string, then adding a new conditional for each input is not scalable. 
-- In the TDD approach, refactoring is only possible if you have enough tests and enough code that all the tests are green. In this way, your tests provide a target for the refactor. If your refactoring fails tests that    
+- In the TDD approach, refactoring is only possible if you have enough tests and enough code that all the tests are green. 
+- In this way, your tests provide a target for the refactor. If your refactoring causes previously written tests to fail, then reexamine the refactored code to ensure it is correctly written.   
+   
 
 ### Exercise #6 Implement the refactor!
 - Inside `sayHello` in `code.js`, what's a change you can identify that will improve the overall functioning of this function?
