@@ -37,5 +37,9 @@ describe ("sayHello", function() {
     it ("should return the string 'Hello, Pat!' when called", function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     })
+// Exercise #8
+    it ("should return the string 'Hello, World!' when called", function () {
+        expect(sayHello()).toBe("Hello, World!");
+    })
 });
 
