@@ -25,5 +25,17 @@ describe ("sayHello", function() {
     it('should return a string when called', function() {
         expect(typeof sayHello()).toBe("string");
     })
+// Exercise #3 - Add a test to confirm actual vs. expected output.
+    it("should return the string 'Hello, Jane!' when called", function() {
+        expect(sayHello("Jane")).toBe("Hello, Jane!");
+    })
+// Exercise #4 Add another small, simple test
+    it("should return the string 'Hello, Alex!' when called", function() {
+        expect(sayHello("Alex")).toBe("Hello, Alex!");
+    })
+// Exercise #5 One more test before refactoring...
+    it ("should return the string 'Hello, Pat!' when called", function() {
+        expect(sayHello("Pat")).toBe("Hello, Pat!");
+    })
 });
 
