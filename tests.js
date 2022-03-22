@@ -13,3 +13,17 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+
+// ------------------
+// Exercise #1 Take your first "Test Drive" by writing your first test!
+
+describe ("sayHello", function() {
+    it('should be a defined function', function() {
+        expect(typeof sayHello).toBe('function');
+    });
+// Exercise #2 Ensure our function returns the right data type.
+    it('should return a string when called', function() {
+        expect(typeof sayHello()).toBe("string");
+    })
+});
+
