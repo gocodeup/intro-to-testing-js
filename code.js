@@ -39,3 +39,13 @@ function sayHello(input) {
         return "Hello, " + input + "!";
         }
 }
+
+function isFive(input) {
+    if (typeof input === "number") {
+        return true;
+    } else if (typeof input === "string") {
+        return (typeof Number(input) === "number");
+    } else {
+        return false;
+    }
+}

@@ -59,3 +59,36 @@ describe ("sayHello", function() {
     });
 });
 
+
+// ------------------
+// Exercise #10
+describe ("isFive", function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe(`function`);
+    });
+    it ("should return a boolean no matter what is called", function () {
+        expect(typeof isFive()).toBe("boolean");
+    });
+    it ("should return a boolean true when 5 is called", function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it ("should return a boolean true when string '5' is called", function () {
+        expect(isFive("5")).toBe(true);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
