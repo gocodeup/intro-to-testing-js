@@ -34,25 +34,28 @@ describe ("sayHello", function() {
         expect(sayHello("Alex")).toBe("Hello, Alex!");
     });
 // Exercise #5 One more test before refactoring...
-    it ("should return the string 'Hello, Pat!' when called", function() {
+    it ("should return the string 'Hello, Pat!' when Pat is called", function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
 // Exercise #8
-    it ("should return the string 'Hello, World!' when called", function () {
+    it ("should return the string 'Hello, World!' when no arguments are called", function () {
         expect(sayHello()).toBe("Hello, World!");
     });
-    it ("should return the string 'Hello, World!' when called", function () {
+    it ("should return the string 'Hello, World!' when true is called", function () {
         expect(sayHello(true)).toBe("Hello, World!");
     });
-    it ("should return the string 'Hello, World!' when called", function () {
+    it ("should return the string 'Hello, World!' when false is called", function () {
         expect(sayHello(false)).toBe("Hello, World!");
     });
 // adding all edge cases from Exercise #8
-    it ("should return the string 'Hello, World!' when called", function () {
+    it ("should return the string 'Hello, World!' when null is called", function () {
         expect(sayHello(null)).toBe("Hello, World!");
     });
-    it ("should return the string 'Hello, World!' when called", function () {
+    it ("should return the string 'Hello, World!' when empty string is called", function () {
         expect(sayHello("")).toBe("Hello, World!");
+    });
+    it ("should return the string 'Hello, World!' when 2.3 called", function () {
+        expect(sayHello(2.3)).toBe("Hello, World!");
     });
 });
 
