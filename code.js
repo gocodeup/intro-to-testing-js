@@ -24,5 +24,18 @@ function sayHello(input) {
     //     }
 
 // Exercise #6 Implement the refactor!
-    return "Hello, " + input + "!";
-    }
+//     return "Hello, " + input + "!";
+//     }
+
+// Exercise #8 "Repeat" step (where we look for additional tests to add)
+// return (input === undefined || typeof input === "boolean") ? "Hello, World!" : "Hello, " + input + "!";
+
+// Refactor code after implementing tests for edge cases
+    if (typeof input !== "string") {
+        return "Hello, World!";
+    } else if (input === "") {
+        return "Hello, World!";
+    } else {
+        return "Hello, " + input + "!";
+        }
+}
