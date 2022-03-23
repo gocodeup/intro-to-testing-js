@@ -77,7 +77,25 @@ describe ("isFive", function() {
     });
 });
 
-
+// ------------------
+// Exercise #11
+describe ("isEven", function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe(`function`);
+    });
+    it ("should return a boolean no matter what is called", function () {
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it ("should return a boolean true when number 2 is called", function () {
+        expect(isFive(2)).toBe(true);
+    });
+    it ("should return a boolean true when number -4 is called", function () {
+        expect(isFive(-4)).toBe(true);
+    });
+    it ("should return a boolean false when number 3 is called", function () {
+        expect(isFive(3)).toBe(false);
+    });
+});
 
 
 

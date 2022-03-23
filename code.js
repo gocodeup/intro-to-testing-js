@@ -49,3 +49,7 @@ function isFive(input) {
         return false;
     }
 }
+
+function isEven(input) {
+    return (input % 2 === 0);
+}
