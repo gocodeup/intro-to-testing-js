@@ -25,4 +25,10 @@ describe("sayHello" , function() {
     it('should return "Hello, Jane!" when sayHello("Jane") is called.', function () {
         expect(sayHello("Jane")).toBe("Hello, Jane!")
     });
+    it('should return "Hello, Alex!" when sayHello("Alex") is called.', function () {
+        expect(sayHello("Alex")).toBe("Hello, Alex!")
+    });
+    it('should return "Hello, Pat!" when sayHello("Pat") is called.', function () {
+        expect(sayHello("Pat")).toBe("Hello, Pat!")
+    });
 });
