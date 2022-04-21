@@ -18,5 +18,21 @@ function sayHello(input) {
     //     return "Hello, Alex!"
     // }
     // return "Hello, Jane!";
-    return "Hello, " + input + "!";
+    //---------------------------
+    // ^^Refactored:    return "Hello, " + input + "!";
+    //---------------------------
+    // if (input === undefined) {
+    //     return "Hello, World!"
+    // } else if (input === true) {
+    //     return "Hello, World!"
+    // } else if (input === false) {
+    //     return "Hello, World!"
+    // } else {
+    //     return "Hello, " + input + "!";
+    // }
+    //---------------------------
+    if (typeof input === "string") {
+        return "Hello, " + input + "!";
+    }
+        return "Hello, World!"
 }
