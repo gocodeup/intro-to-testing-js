@@ -12,10 +12,11 @@ function helloWorld() {
 
 // 1.
 function sayHello(input) {
-    if(input === "Pat") {
-        return "Hello, Pat!"
-    } else if(input === "Alex") {
-        return "Hello, Alex!"
-    }
-    return "Hello, Jane!";
+    // if(input === "Pat") {
+    //     return "Hello, Pat!"
+    // } else if(input === "Alex") {
+    //     return "Hello, Alex!"
+    // }
+    // return "Hello, Jane!";
+    return "Hello, " + input + "!";
 }
