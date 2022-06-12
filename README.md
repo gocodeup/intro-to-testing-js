@@ -138,7 +138,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Finally, push your work by running `git push`. Pushing uploads your new commits to your remote repository, meaning your own fork on GitHub.
 
 ### Exercise #2 Ensure our function returns the right data type.
-- New tests will each have their own `expect`, `it`,  the `describe`
+- New tests for `sayHello` will each have their own `expect` and `it` inside the `describe` previously created. Each function you are writing and testing should typically have its own `describe`
 - Step 1: The smallest possible test, now that the function exists, is to ensure that calling the function gives us a string. Inside of `tests.js`, add an assertion to `sayHello` that it "should return a string when called.". The test should look similar to `expect(typeof sayHello()).toBe("string")`
 - Step 2: Run all tests to make sure that the new test starts red.
 - Step 3: Have your `sayHello` function return a string. The simplest code and smallest change possible is to return an empty string `return ""`. 
