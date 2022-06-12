@@ -148,7 +148,7 @@ Our next exercise is to follow the TDD workflow to develop incremental tests and
 - Always: Add, commit, and push your work to GitHub.
 
 ### Exercise #3 - Add a test to confirm actual vs. expected output.
-- Step 1: How that the function exists and returns the right data type, let's add our first realistic assertion. In `tests.js`, assert that `sayHello("Jane")` returns `"Hello, Jane!"`. Our first test should be *super* simple and *super* small.
+- Step 1: Now that the function exists and returns the right data type, let's add our first realistic assertion. In `tests.js`, assert that `sayHello("Jane")` returns `"Hello, Jane!"`. Our first test should be *super* simple and *super* small.
 - Step 2: Run all tests and make sure that this newly added test is red.
 - Step 3: If the test wants us to return `"Hello, Jane!"` then literally write `return "Hello, Jane!";` because that's the simplest way to green a test looking for `"Hello, Jane!"`.
 - Step 4: Run all tests. They should all be green at this point.
