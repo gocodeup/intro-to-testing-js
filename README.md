@@ -1,7 +1,7 @@
 # Intro to Testing in JS
 
 ## Summary
-This is an introduction to automated testing in JavaScript. The idea behind automated testing is to provide immediate feedback on the code you write to solve a problem, add a feature, or fix a bug. The feedback from the tests comes in the form of green passing tests or red failing tests. Tests are functions that test functions to compare the results of the actual output vs. the expected output.
+This is an introduction to automated testing in JavaScript. The idea behind automated testing is to provide immediate feedback on the code you write to solve a problem, add a feature, or fix a bug. The feedback from the tests comes in the form of green passing tests or red failing tests. Tests are functions that test, or exercise, OTHER functions, comparing the results of actual output vs. expected output.
 
 Specifically, we will be working with "unit tests", as our type of test. A unit means the smallest possible block of functionality. Most frequently, this means a single user-defined function in code. Unit tests aim to test the building blocks of functionality. In this way, they test application code from the inside-out. Other types of test such as end-to-end tests test the entire application from the outside-in
 
@@ -39,13 +39,14 @@ Additionally, we will be using a process called Test Driven Development, commonl
 ## Reference: The Test Driven Development means that tests "drive" the development.
 [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development), TDD, is the process of authoring a test before writing any other code. Here's the TDD workflow:
 
-1. Step 1: Write the smallest possible test: Identify the simplest, smallest thing you want to confirm. For example, before a function exists, assert that the function is defined.
-2. Step 2: Run all the tests to ensure that the new test fails. We're **supposed** to see a red, failing test, since there's no code yet to green it. Red means we did the first step correctly. Seeing the newest test turn red is critical because our tests drive the development, not the other way around.
-3. Step 3: Write only enough code to green that newest test. No more, no less. It's OK if things are hard-coded here.
-4. Step 4: Run all tests. We're looking for green tests across the board.
-5. Step 5: Refactor the code. 
-6. Step 6: Repeat the process by going back to Step 1. The repeat step means  following the steps to add new tests.
-7. Overview: This entire TDD workflow is often explained as the repetition of "Red, Green, Refactor". This encapsulates the idea of writing a single, small failing test, writing only enough code to green the test, and then to refactor, when possible.
+1. Write the smallest possible test: Identify the simplest, smallest thing you want to confirm. For example, before a function exists, assert that the function is defined.
+2. Run all the tests to ensure that the new test fails. We're **supposed** to see a red, failing test, since there's no code yet to green it. Red means we did the first step correctly. Seeing the newest test turn red is critical because our tests drive the development, not the other way around.
+3. Write only enough code to green that newest test. No more, no less. It's OK if things are hard-coded here.
+4. Run all tests. We're looking for green tests across the board.
+5. Refactor the code. 
+6. Repeat the process by going back to Step 1. The repeat step means  following the steps to add new tests.
+
+This entire TDD workflow is often explained as the repetition of "Red, Green, Refactor". This encapsulates the idea of writing a single, small failing test, writing only enough code to green the test, and then to refactor, when possible.
 
 ## Three Laws of Test Driven Development
 - You are not allowed to write any production code unless it is to make a failing unit test pass.
