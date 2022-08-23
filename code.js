@@ -3,6 +3,6 @@ const helloWorld = function () {
     return "Hello, World!";
 }
 
-function sayHello(){
-
+function sayHello(string){
+    return "Hello, " +string + "!";
 }
