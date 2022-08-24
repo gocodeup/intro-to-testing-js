@@ -114,7 +114,7 @@ const helloWorld = function() {
 **Before moving on, ensure that all tests are green.**
 
 ## Let's Test Drive a `sayHello` function
-- We'll build up our solution incrementally, in a Test-Driven manner.
+- We'll build up our solu****tion incrementally, in a Test-Driven manner.
 - Be careful not to refactor too early. Only refactor once we have sufficient tests.
 - Ultimately, `sayHello` should say "Hello" to any string we pass to it.
 - We'll handle some edge cases once we've solved the heart of the matter.
