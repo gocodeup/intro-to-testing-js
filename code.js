@@ -1,4 +1,5 @@
 // helloWorld function 
 function helloWorld() {
-    return "Hello";
+    return "Hello, World!";
 }
+descfribe ('sayHello/, ')
