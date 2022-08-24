@@ -32,11 +32,13 @@ describe('sayHello', function () {
         expect(sayHello("Pat")).toBe("Hello, Pat!")
     })
 });
-// Step 1: Add another (tiny) assertion! In tests.js, assert that sayHello("Pat") returns "Hello, Pat!".
-// Since our tests should be super simple, the assertion should be expect(sayHello("Pat")).toBe("Hello, Pat!")
-// Step 2: Run all tests and make sure that this newly added test is red and failing.
-//     Step 3: Again, you may feel the urge to jump to the "correct" answer already. Let's stay on target.
-//     Write just enough code to green the test. For this case, just enough code means adding another conditional
-//     such that if input === "Pat", then the function should have return "Hello, Pat!".
-// Step 4: Run all tests. Does each test turn green? If so, then we can proceed.
-//     Step 5: Refactor! It's definitely refactoring time!
+
+
+//"If your code ain't checked-in to source control, then it doesn't exist."
+// In your terminal, ensure that the pwd command shows that you're in the directory for this project.
+// First, git status. Notice which files are tracked by git and which files have changes.
+// Second, type git add -A to tell git that you want to get all the changed files staged for commit.
+// Now, type git status. You should see file names in green. This means that the files are ready for commit.
+// Next, type git commit -m "add tests and ability to say 'hello' to any input."
+// Type git status, again, to make sure that all files are added and committed.
+// Finally, push your work with git push.
