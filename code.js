@@ -13,10 +13,9 @@ function helloWorld() {
     // }
     //
 function sayHello(name) {
-    if (name === true) {
+    if (name === true || name === false) {
         return "Hello, World!";
     } else {
-
+        return "Hello, " + name + "!";
     }
-    return "Hello, " + name + "!";
 }
