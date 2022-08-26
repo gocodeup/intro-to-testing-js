@@ -21,23 +21,27 @@ function sayHello(input) {
 }
 
 // isFive function
-function isFive(){
-
+function isFive(input){
+    if(input === 5 || input === "5") {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // isEven function
-function isEven() {
-
-}
+// function isEven() {
+//
+// }
 
 //isVowel function
-function isVowel() {
-
-}
+// function isVowel() {
+//
+// }
 // add function
-function add() {
-
-}
+// function add() {
+//
+// }
 
 
 

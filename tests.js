@@ -41,6 +41,22 @@ describe('sayHello', function(){
     it('should return the string "Invalid input!" when passed numeric string', function(){
        expect(sayHello("1987")).toBe("Invalid input!");
     });
-
 });
-
+describe('isFive', function(){
+    it('should be a defined function', function(){
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return a boolean value', function(){
+        expect(typeof isFive(5)).toBe('boolean');
+        expect(typeof isFive("foo")).toBe('boolean');
+    });
+    it('should return true when passed 5 as input', function(){
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return true when passed "5" as input', function(){
+        expect(isFive("5")).toBe(true);
+    });
+    it('should return false when passed "five" as input', function(){
+        expect(isFive("five")).toBe(false);
+    });
+});
