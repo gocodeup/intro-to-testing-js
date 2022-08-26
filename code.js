@@ -38,7 +38,17 @@ function isEven(input) {
     return true;
 }
 
-
+// isVowel function
+function isVowel(char) {
+    let vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O","U"];
+    let isVowel = false;
+    vowels.forEach((item) =>{
+        if(item === char) {
+            isVowel = true;
+        }
+    });
+    return isVowel;
+}
 
 
 
