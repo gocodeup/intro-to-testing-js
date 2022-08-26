@@ -60,3 +60,39 @@ describe('isFive', function(){
         expect(isFive("five")).toBe(false);
     });
 });
+describe('isEven', function(){
+    it('should be a defined function', function(){
+        expect(typeof isEven).toBe('function');
+    })
+    it('should return a boolean value', function(){
+        expect(typeof isEven(8)).toBe('boolean');
+        expect(typeof isEven("orange")).toBe('boolean');
+    });
+    it('should return true when passed 2 as input', function(){
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true when passed -4 as input', function(){
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false when passed 3 as input', function(){
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return false when passed "banana" as input', function(){
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return true when passed "8" as input', function(){
+        expect(isEven("8")).toBe(true);
+    })
+    it('should return false when passed Infinity as input', function(){
+        expect(isEven(Infinity)).toBe(false);
+    })
+    it('should return false when passed true as input', function(){
+        expect(isEven(true)).toBe(false);
+    });
+    it('should return false when passed false as input', function(){
+        expect(isEven(false)).toBe(false);
+    });
+    it('should return false when called without an argument', function(){
+        expect(isEven()).toBe(false);
+    })
+});

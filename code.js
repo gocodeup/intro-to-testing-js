@@ -3,14 +3,15 @@ function helloWorld() {
     return "Hello, World!";
 }
 
+let isOnlyNumericString = function(value) {
+    return /^\d+$/.test(value);
+}
+let isOnlyLetterString = function(value){
+    return /^[a-zA-Z]+$/.test(value);
+}
+
 // sayHello function
 function sayHello(input) {
-    let isOnlyNumericString = function(value) {
-        return /^\d+$/.test(value);
-    }
-    let isOnlyLetterString = function(value){
-        return /^[a-zA-Z]+$/.test(value);
-    }
     if(input === undefined || input === true || input === false) {
         return "Hello, World!";
     } else if(isOnlyLetterString(input)) {
@@ -30,18 +31,13 @@ function isFive(input){
 }
 
 // isEven function
-// function isEven() {
-//
-// }
+function isEven(input) {
+    if(typeof input === "boolean" || input % 2 === 1 || isOnlyLetterString(input)) {
+        return false;
+    }
+    return true;
+}
 
-//isVowel function
-// function isVowel() {
-//
-// }
-// add function
-// function add() {
-//
-// }
 
 
 
