@@ -18,6 +18,11 @@ function helloWorld() {
 //         return "Hello, World!"
 // }
 
-function sayHello() {
-    return ""
+function sayHello(name) {
+    if(typeof name === "string" && name !== "") {
+        return `Hello, ${name}!`
+    }
+    return "Hello, World!"
 }
+
+console.log(sayHello("5"))
