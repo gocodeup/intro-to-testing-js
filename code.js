@@ -11,9 +11,13 @@ function helloWorld() {
 // }
 
 // 1.
-function sayHello(input) {
-    if (typeof input === "string") {
-        return "Hello, " + input + "!";
-    }
-        return "Hello, World!"
+// function sayHello(input) {
+//     if (typeof input === "string") {
+//         return "Hello, " + input + "!";
+//     }
+//         return "Hello, World!"
+// }
+
+function sayHello() {
+    return ""
 }
