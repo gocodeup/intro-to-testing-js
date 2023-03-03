@@ -63,6 +63,8 @@ Some edge cases to consider. What if:
     the input is another data type like an array, object, or function? 
     */
 // ====================================================================
+// Exercise #10 Let's Test-Drive an isFive function!
+
 // describe("isFive", function() {
 //     it('should be a defined function', function () {
 //         expect(typeof "isFive").toBe('function');
